@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xn--drenajebrasileo-crb.com/sitemap.xml
