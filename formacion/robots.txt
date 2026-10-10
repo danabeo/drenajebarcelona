@@ -1,4 +1,22 @@
+# robots.txt · formacion.xn--drenajebrasileo-crb.com
+# Indexación abierta para buscadores. Ojo: robots.txt es una norma de cortesía;
+# los bots maliciosos lo ignoran. La protección real está en _headers (CSP, HSTS)
+# y en el cortafuegos de Cloudflare.
+
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
+
+# Rastreadores comerciales de SEO muy agresivos (no son buscadores; no aportan visitas)
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: BLEXBot
+User-agent: PetalBot
+User-agent: MegaIndex.ru
+User-agent: DataForSeoBot
+User-agent: serpstatbot
+Disallow: /
 
 Sitemap: https://formacion.xn--drenajebrasileo-crb.com/sitemap.xml
