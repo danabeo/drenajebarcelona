@@ -8,13 +8,17 @@ h1{font-family:"Great Vibes",cursive;font-weight:400;font-size:64px;margin:0}
 p{color:#A9B3AD;letter-spacing:.3em;font-size:11px;margin:0 0 28px}
 ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;min-width:240px}
 a{display:block;padding:12px 18px;border:1px solid #25332C;border-radius:12px;color:#F1EAE3;text-decoration:none}
-a:hover{border-color:#E6A4C2}
+a:hover,a.sug{border-color:#E6A4C2}
+.i{max-width:420px;margin:0 auto 28px;color:#C9C2BB;font-size:15px;line-height:1.6;letter-spacing:0}
+a.sug{background:rgba(230,164,194,.08)}
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jost:wght@400&display=swap">
 </head><body>
 <div class="w"><div><h1>Maria</h1><p>DRENAJE BRASILEÑO</p>
-<ul><li><a href="es/index.html">Español</a></li><li><a href="en/index.html">English</a></li><li><a href="pt-br/index.html">Português (Brasil)</a></li><li><a href="fr/index.html">Français</a></li><li><a href="it/index.html">Italiano</a></li><li><a href="de/index.html">Deutsch</a></li></ul></div></div>
+<p class="i">Drenaje brasileño manual en Barcelona, junto a Plaça Espanya. Exclusivo mujeres. Elige tu idioma · Choose your language.</p>
+<ul><li><a href="/es/">Español</a></li><li><a href="/en/">English</a></li><li><a href="/pt-br/">Português (Brasil)</a></li><li><a href="/fr/">Français</a></li><li><a href="/it/">Italiano</a></li><li><a href="/de/">Deutsch</a></li></ul></div></div>
 <script>
-(function(){var l=(navigator.language||'es').toLowerCase(),m={'en':'en','pt':'pt-br','fr':'fr','it':'it','de':'de','es':'es','ca':'es'};var c=m[l.slice(0,2)]||'es';location.replace(location.protocol==='file:'?c+'/index.html':'/'+c+'/');})();
+// Sin redirección automática: solo destaca y sube el idioma del navegador.
+(function(){try{var l=(navigator.language||'es').toLowerCase(),m={'en':'en','pt':'pt-br','fr':'fr','it':'it','de':'de','es':'es','ca':'es'},c=m[l.slice(0,2)]||'es',a=document.querySelector('a[href="/'+c+'/"]');if(a){a.className='sug';var li=a.parentNode;li.parentNode.insertBefore(li,li.parentNode.firstChild);}}catch(e){}})();
 </script>
 </body></html>
