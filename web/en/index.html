@@ -246,8 +246,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(13,20,17,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:none;gap:10px}
 .sticky .btn{flex:1;justify-content:center;padding:14px}.sticky .btn-ghost{flex:0 0 auto}
 @media (max-width:760px){.sticky{display:flex}}
-.fab{position:fixed;right:24px;bottom:24px;z-index:40;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .2s}
-.fab:hover{transform:scale(1.07)}.fab svg{width:32px;height:32px}
+.fab{position:fixed;right:24px;bottom:24px;z-index:40;width:62px;height:62px;border-radius:50%;background:var(--orchid);color:#1A0E15;display:grid;place-items:center;box-shadow:0 12px 40px -14px rgba(230,164,194,.6);transition:transform .2s,background .2s}
+.fab:hover{transform:scale(1.07);background:var(--orchid-2)}
+.fab svg path{fill:currentColor}.fab svg{width:32px;height:32px}
 @media (max-width:760px){.fab{display:none}}
 @media (prefers-reduced-motion:no-preference){
   .hero h1,.hero .lead,.hero .cta-row,.hero .script{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
