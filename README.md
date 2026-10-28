@@ -5,7 +5,7 @@ Web estática de **Maria · Drenaje Brasileño** (Barcelona). Se publica con Clo
 | Carpeta | Dominio | Proyecto de Cloudflare Pages |
 |---|---|---|
 | `web/` | https://drenajebrasileño.com (`xn--drenajebrasileo-crb.com`) | `drenajebrasileno-web` · build output directory: `web` |
-| `formacion/` | https://formacion.drenajebrasileño.com | `drenajebrasileno-formacion` · build output directory: `formacion` |
+| `formacion/` | https://formacion.drenajebrasileño.com (solo redirige 301 al curso en la web principal) | `drenajebrasileno-formacion` · build output directory: `formacion` |
 
 - No hay paso de compilación (build command vacío). Cada `push` a `main` se publica solo.
 - `web/index.html` (español, raíz), `web/en`, `pt-br`, `fr`, `it`, `de`: una página por idioma. `/es/` redirige a `/` (301): el español vive en la raíz y es también el x-default.

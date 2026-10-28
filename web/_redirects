@@ -11,6 +11,8 @@
 /fr/index.html       /fr/                   301
 /it/index.html       /it/                   301
 /de/index.html       /de/                   301
-/formacion           https://formacion.xn--drenajebrasileo-crb.com/   301
-/formacion/*         https://formacion.xn--drenajebrasileo-crb.com/   301
-/formación           https://formacion.xn--drenajebrasileo-crb.com/   301
+/formacion           /curso-drenaje-linfatico-brasileno/   301
+/formacion/*         /curso-drenaje-linfatico-brasileno/   301
+/formación           /curso-drenaje-linfatico-brasileno/   301
+/curso               /curso-drenaje-linfatico-brasileno/   301
+/curso/              /curso-drenaje-linfatico-brasileno/   301
