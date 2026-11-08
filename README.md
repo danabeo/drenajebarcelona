@@ -13,3 +13,11 @@ Web estática de **Maria · Drenaje Brasileño** (Barcelona). Se publica con Clo
 - Las páginas se generan desde la plantilla de trabajo; si se edita a mano un idioma, hay que repetir el cambio en los demás.
 
 Contacto de la web: WhatsApp +34 624 33 66 76 · C/ Sant Fructuós, 2 · 08004 Barcelona.
+
+GitHub Pages publica automáticamente web/ desde main con GitHub Actions. El
+artefacto se genera con node scripts/build-pages.mjs web .pages-output. La
+compilación añade las páginas de redirección y adapta la política de
+seguridad al HTML. GitHub Pages sirve las rutas de compatibilidad mediante
+redirecciones en el navegador, con una página 404 para las rutas comodín.
+Los archivos _headers y _redirects siguen disponibles para el despliegue
+de respaldo en Cloudflare Pages.
