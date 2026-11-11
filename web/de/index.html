@@ -332,6 +332,16 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .award b em{color:var(--orchid)}
 .award small{display:block;margin-top:8px;color:var(--mute);font-size:14px}
 @media (max-width:560px){.award{flex-direction:column;align-items:flex-start;gap:14px;padding:20px}.award img{width:92px;height:92px}}
+@media (min-width:981px){
+  .reviews-intro{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);margin-bottom:36px}
+  .reviews-intro .head{display:grid;align-content:center;align-items:start;gap:24px;margin:0}
+  .reviews-intro h2{font-size:clamp(44px,4.65vw,62px)}
+  .reviews-intro .scores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reviews-intro .scores a{grid-template-columns:max-content minmax(0,1fr);padding-inline:clamp(12px,1.4vw,18px)}
+  .reviews-intro .award{gap:clamp(16px,2vw,26px);margin:0;padding:clamp(20px,2.2vw,30px)}
+  .reviews-intro .award img{width:clamp(72px,7.5vw,104px);height:auto}
+  .reviews-intro .award b{font-size:clamp(28px,2.5vw,34px)}
+}
 /* treatwell bar */
 .tw-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 16px;background:#1F1649;color:var(--ink);font-size:13.5px;letter-spacing:.02em;text-decoration:none;border-bottom:1px solid rgba(217,184,119,.25)}
 .tw-bar img{width:26px;height:26px;flex:none}
@@ -531,9 +541,11 @@ h2 > .h2-kw{display:block;font-family:var(--sans);font-style:normal;line-height:
 </div></div></section>
 
 <section id="opiniones" style="padding-top:0"><div class="wrap">
-  <div class="head"><div><h2><span class="eyebrow h2-kw">Echte Bewertungen zu Marias Lymphdrainage</span> Was sie sagen, <em>wenn sie von der Liege aufstehen</em>.</h2></div>
-  <div class="scores"><a href="https://www.google.com/maps/place/Maria+Drenaje+Brasile%C3%B1o/@41.3725731,2.1479568,17z/data=!4m8!3m7!1s0x12a4a3bd539684a3:0xc013f76852825cd2!8m2!3d41.3725731!4d2.1479568!9m1!1b1!16s%2Fg%2F11n9sn1snj" target="_blank" rel="noopener"><b>5,0</b><span class="stars">★★★★★</span><small>33 Bewertungen auf Google</small></a><a href="https://www.treatwell.es/establecimiento/maria-drenaje-brasileno-exclusivo-para-mujeres/" target="_blank" rel="noopener"><b>5,0</b><span class="stars">★★★★★</span><small>75 Bewertungen auf Treatwell</small></a></div></div>
-  <a class="award" href="https://www.treatwell.es/establecimiento/maria-drenaje-brasileno-exclusivo-para-mujeres/" target="_blank" rel="noopener"><img src="../img/treatwell-top-rated-2026-static.webp" width="112" height="112" alt="Treatwell Top Rated 2026 Siegel" loading="lazy"><div><span class="eyebrow">Treatwell-Auszeichnung 2026</span><b>Ausgezeichnet als <em>Top Rated 2026</em> auf Treatwell.</b><small>Eine Auszeichnung für die bestbewerteten Studios, basierend auf Kundinnenbewertungen.</small></div></a>
+  <div class="reviews-intro">
+    <div class="head"><div><h2><span class="eyebrow h2-kw">Echte Bewertungen zu Marias Lymphdrainage</span> Was sie sagen, <em>wenn sie von der Liege aufstehen</em>.</h2></div>
+    <div class="scores"><a href="https://www.google.com/maps/place/Maria+Drenaje+Brasile%C3%B1o/@41.3725731,2.1479568,17z/data=!4m8!3m7!1s0x12a4a3bd539684a3:0xc013f76852825cd2!8m2!3d41.3725731!4d2.1479568!9m1!1b1!16s%2Fg%2F11n9sn1snj" target="_blank" rel="noopener"><b>5,0</b><span class="stars">★★★★★</span><small>33 Bewertungen auf Google</small></a><a href="https://www.treatwell.es/establecimiento/maria-drenaje-brasileno-exclusivo-para-mujeres/" target="_blank" rel="noopener"><b>5,0</b><span class="stars">★★★★★</span><small>75 Bewertungen auf Treatwell</small></a></div></div>
+    <a class="award" href="https://www.treatwell.es/establecimiento/maria-drenaje-brasileno-exclusivo-para-mujeres/" target="_blank" rel="noopener"><img src="../img/treatwell-top-rated-2026-static.webp" width="112" height="112" alt="Treatwell Top Rated 2026 Siegel" loading="lazy"><div><span class="eyebrow">Treatwell-Auszeichnung 2026</span><b>Ausgezeichnet als <em>Top Rated 2026</em> auf Treatwell.</b><small>Eine Auszeichnung für die bestbewerteten Studios, basierend auf Kundinnenbewertungen.</small></div></a>
+  </div>
   <div class="car" id="car"><button class="car-btn prev" id="car-prev" aria-label="Vorherige Bewertung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="car-btn next" id="car-next" aria-label="Nächste Bewertung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button><div class="rev" id="rev" aria-live="off">
 <article class="r big"><div class="rt"><span class="stars">★★★★★</span></div><q>“Excepcional y súper profesional. Soy azafata, me hago masajes en hoteles de 5 estrellas y Maria está a la altura, os lo aseguro. Notas la mejora en cada sesión, el lugar es cuqui y limpio, los aceites son buenos y la calidad-precio, súper. Me he sacado un bono: Maria es un acierto 1000×1000.”</q><div class="who"><b>Silvina</b><span class="src treatwell">Treatwell · Feb. 2026</span></div></article>
 <article class="r "><div class="rt"><span class="stars">★★★★★</span></div><q>“El masaje linfático de Maria es mi espacio de relax, salud y bienestar. Gracias por tu profesionalidad y el cariño con el que haces tu trabajo. Con ganas de volver a mi próxima sesión.”</q><div class="who"><b>Carmen</b><span class="src treatwell">Treatwell · Okt. 2026</span></div></article>
