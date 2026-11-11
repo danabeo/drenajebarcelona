@@ -19,4 +19,4 @@ User-agent: DataForSeoBot
 User-agent: serpstatbot
 Disallow: /
 
-Sitemap: https://formacion.xn--drenajebrasileo-crb.com/sitemap.xml
+Sitemap: https://xn--drenajebrasileo-crb.com/sitemap.xml
