@@ -38,11 +38,6 @@ for (const [alias, target] of Object.entries(aliases)) {
   await writeFile(join(directory, 'index.html'), page);
 }
 
-const sitemap = await readFile(join(source, 'sitemap.xml'), 'utf8');
-await writeFile(join(output, 'sitemap-index.xml'), sitemap);
-const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, url]) => url);
-await writeFile(join(output, 'sitemap.txt'), sitemapUrls.join('\n') + '\n');
-
 const fallback = '<script>\n'
   + '  const path = location.pathname;\n'
   + '  if (/^\\/(es|html)(\\/|$)/.test(path)) location.replace("/" + location.search + location.hash);\n'
