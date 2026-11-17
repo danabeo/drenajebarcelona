@@ -1,6 +1,6 @@
 # drenajebrasileño.com
 
-Web estática de **Maria · Drenaje Brasileño** (Barcelona). Se publica con Cloudflare Pages.
+Web estática de **Maria · Drenaje Brasileño** (Barcelona). La web principal se publica con GitHub Pages; el DNS sigue en Cloudflare. Se dejó Cloudflare Pages porque Movistar bloquea IP de Cloudflare los fines de semana y la web quedaba inaccesible.
 
 | Carpeta | Dominio | Proyecto de Cloudflare Pages |
 |---|---|---|
@@ -21,3 +21,10 @@ seguridad al HTML. GitHub Pages sirve las rutas de compatibilidad mediante
 redirecciones en el navegador, con una página 404 para las rutas comodín.
 Los archivos _headers y _redirects siguen disponibles para el despliegue
 de respaldo en Cloudflare Pages.
+
+Redirecciones en GitHub Pages: no admite 301 propias. Las rutas antiguas
+(/es/, /html/, /curso/, /formacion/) son páginas con meta refresh instantáneo
+y canonical a la URL nueva, que Google trata como redirección permanente.
+Las subrutas (/es/..., /formacion/...) pasan por 404.html, que redirige con
+JavaScript. Las imágenes renombradas se publican también con su nombre antiguo.
+GitHub Pages ya redirige http a https y www al dominio sin www.

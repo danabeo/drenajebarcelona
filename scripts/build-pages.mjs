@@ -30,12 +30,37 @@ for (const [alias, target] of Object.entries(aliases)) {
   const directory = join(output, alias);
   await mkdir(directory);
   const canonical = new URL(target, 'https://xn--drenajebrasileo-crb.com');
+  // GitHub Pages no permite 301. Google trata un meta refresh instantáneo como
+  // redirección permanente; sin noindex para que traspase la señal a la URL nueva.
   const page = '<!doctype html>\n<html lang="es"><head><meta charset="utf-8">'
-    + '<meta name="robots" content="noindex"><title>Página trasladada</title>'
+    + '<meta http-equiv="refresh" content="0; url=' + canonical + '">'
+    + '<title>Página trasladada</title>'
     + '<link rel="canonical" href="' + canonical + '">'
-    + '<meta http-equiv="refresh" content="0; url=' + target + '"></head>'
-    + '<body><a href="' + target + '">Ir a la nueva página</a></body></html>\n';
+    + '<script>location.replace("' + target + '" + location.search + location.hash)</script></head>'
+    + '<body><a href="' + canonical + '">Ir a la nueva página</a></body></html>\n';
   await writeFile(join(directory, 'index.html'), page);
+}
+
+// Imágenes renombradas en octubre de 2026: se publican también con el nombre
+// antiguo para que las URL que Google ya conocía no den 404.
+const renamedImages = {
+  'r1_antes.jpg': 'drenaje-linfatico-brasileno-espalda-antes.jpg',
+  'r1_despues.jpg': 'drenaje-linfatico-brasileno-espalda-despues.jpg',
+  'r4_antes.jpg': 'drenaje-linfatico-brasileno-abdomen-1-antes.jpg',
+  'r4_despues.jpg': 'drenaje-linfatico-brasileno-abdomen-1-despues.jpg',
+  'r72_antes.jpg': 'drenaje-linfatico-brasileno-abdomen-2-antes.jpg',
+  'r72_despues.jpg': 'drenaje-linfatico-brasileno-abdomen-2-despues.jpg',
+  'r73_antes.jpg': 'drenaje-linfatico-brasileno-abdomen-3-antes.jpg',
+  'r73_despues.jpg': 'drenaje-linfatico-brasileno-abdomen-3-despues.jpg',
+  'r52_antes.jpg': 'drenaje-linfatico-brasileno-abdomen-4-antes.jpg',
+  'r52_despues.jpg': 'drenaje-linfatico-brasileno-abdomen-4-despues.jpg',
+  'r113_antes.jpg': 'drenaje-linfatico-brasileno-cintura-antes.jpg',
+  'r113_despues.jpg': 'drenaje-linfatico-brasileno-cintura-despues.jpg',
+  'r93_antes.jpg': 'drenaje-linfatico-brasileno-cintura-contorno-antes.jpg',
+  'r93_despues.jpg': 'drenaje-linfatico-brasileno-cintura-contorno-despues.jpg',
+};
+for (const [oldName, newName] of Object.entries(renamedImages)) {
+  await cp(join(source, 'img', newName), join(output, 'img', oldName));
 }
 
 const fallback = '<script>\n'
